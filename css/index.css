@@ -4,22 +4,21 @@ header{
     background-position: left 50% bottom 60%;  
 }
 
-.page-title{
-    font-size: 3rem;
-    color: white;
-    padding-top: 11rem;
-    text-shadow: 2px 2px 0px rgb(0, 0, 0), 3px 3px 0px rgba(255, 255, 255, 0.15);
-}
-
-.page-subtitle{
-    font-size: 1.5rem;
-    color: white;
-    padding-top: 0.5rem;
-    text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgba(255, 255, 255, 0.15);;
-}
-
 main{
-    height: 2000px;
-    width: 100%;
-    /* background-color: coral; */
+    
+}
+
+.section_header{
+    font-size: 1.85rem;
+    color: var(--secondary-bg-color);
+    
+}
+
+.section_header span{
+    border-bottom: 3px solid white;
+}
+
+.section_text{
+    padding-top: 1rem;
+    font-size: 1.3rem;
 }
