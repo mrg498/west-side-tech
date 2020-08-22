@@ -1,29 +1,38 @@
+:root {
+  --main-bg-color: rgb(230, 209, 127);
+}
+
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
 	margin: 0;
-	background-color: rgb(147, 234, 190);
+    background-color: var(--main-bg-color);
+    font-family: 'Dosis', sans-serif;
 }
 
-.navbar {
-	background-color: yellow;
-	height: 2rem;
-	display: none;
-	justify-content: space-evenly;
-	align-items: center;
+header{
+    height: 40vh;
+    width: 100vw;
+    background-color: white;
+}
+
+main{
+    border: 5px solid white;
 }
 
 .nav-item {
-	color: black;
 	text-decoration: none;
 }
 
 .hamburger-menu{
-    position: -webkit-sticky;
-	position: sticky;
-    top: 20px;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    position: fixed;
+    top: 0px;
     z-index: 200;
 }
 
@@ -32,37 +41,111 @@ body {
 	cursor: pointer;
 	width: 3rem;
 	height: 3rem;
-	background-color: white;
+	background-color: var(--main-bg-color);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
     border-radius: 5px;
+    border: 2px solid white;
 }
 
 .bars {
 	height: 2rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+    justify-content: space-evenly;
+    transition: all 1s;
 }
 
 .bar {
-	border-bottom: 3px solid rgb(67, 67, 255);
+	border-bottom: 3px solid white;
 	border-radius: 15px;
 	width: 60%;
 	margin: auto;
 }
 
+.transform-bars{
+    transform: rotate(90deg);
+}
+
 .overlay{
-    display: none;
     position: fixed;
     top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(67, 67, 255, 0.44);
+    background-color: rgb(85, 129, 225);
     z-index: 100;
+    display: flex;
+    margin-left: -100%;
+}
+
+.mobile-nav{
+    transform: scale(0);
+    list-style: none;
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    transition: all 1s ease;
+}
+
+.mobile-nav li{
+    padding-bottom: 3rem;
+}
+
+.mobile-nav li a{
+    color: white;
+    padding: 0.5rem;
+    border-bottom: 3px solid rgb(140, 201, 171);
+    font-size: 1.3rem;
+}
+
+.mobile-nav li a:hover{
+    color: rgb(169, 225, 197);
+}
+
+.show-mobile-nav{
+    transform: scale(1);
 }
 
 .show-overlay{
-    display: inline-block;
+    height: 100vh;
+    width: 50%;
+    margin-left: 50%;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.hide-overlay{
+    height: 100vh;
+    animation-duration: 1s;
+    animation-name: slideout;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 50%;
+    width: 100%;
+  }
+}
+@keyframes slideout {
+  from {
+    margin-left: 50%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+
+.page-title{
+    text-align: center;
+}
+
+.page-subtitle{
+    text-align: center;
 }
