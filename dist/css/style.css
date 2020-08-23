@@ -175,6 +175,8 @@ main .container {
 	font-size: 1.5rem;
 	color: white;
 	padding-top: 0.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	padding-bottom: 10%;
 	text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgba(255, 255, 255, 0.15);
 }
