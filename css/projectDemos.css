@@ -1,0 +1,28 @@
+header{
+    background-image: url(../images/andrew-jenkins-19-mGAqVH90-unsplash.jpg);
+    background-size: cover;
+    background-position: left 50% bottom 60%;  
+}
+
+
+
+main{
+    height: 2000px;
+    width: 100%;
+    /* background-color: coral; */
+}
+
+.section_header{
+    font-size: 1.85rem;
+    color: var(--secondary-bg-color);
+    
+}
+
+.section_header span{
+    border-bottom: 3px solid white;
+}
+
+.section_text{
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}

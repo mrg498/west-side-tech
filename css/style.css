@@ -1,0 +1,246 @@
+:root {
+	--main-bg-color: rgb(211, 185, 82);
+	--secondary-bg-color: rgb(54, 103, 210);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	background-color: var(--main-bg-color);
+	font-family: 'Dosis', sans-serif;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+	height: 40%;
+	width: 100vw;
+	background-color: white;
+}
+
+main {
+	border: 5px solid white;
+}
+
+main .container {
+	padding: 2rem 1.5rem;
+}
+
+.nav-item {
+	text-decoration: none;
+}
+
+.hamburger-menu {
+	/* position: -webkit-sticky;
+    position: sticky; */
+	position: fixed;
+	top: 0px;
+	z-index: 200;
+}
+
+.hamburger-icon {
+	margin: 1rem;
+	cursor: pointer;
+	width: 3rem;
+	height: 3rem;
+	background-color: var(--main-bg-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: 5px;
+	border: 2px solid white;
+}
+
+.bars {
+	height: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	transition: all 1s;
+}
+
+.bar {
+	border-bottom: 3px solid white;
+	border-radius: 15px;
+	width: 60%;
+	margin: auto;
+}
+
+.transform-bars {
+	transform: rotate(90deg);
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	background-color: var(--secondary-bg-color);
+	border: 3px solid white;
+	z-index: 100;
+	display: flex;
+	margin-left: -100%;
+}
+
+.mobile-nav {
+	transform: scale(0);
+	list-style: none;
+	margin-top: 2rem;
+	padding-left: 1.5rem;
+	padding-top: 1rem;
+	transition: all 1s ease;
+}
+
+.mobile-nav li {
+	padding-bottom: 3rem;
+}
+
+.mobile-nav li a {
+	color: white;
+	padding: 0.5rem;
+	border-bottom: 3px solid rgb(140, 201, 171);
+    font-size: 1.3rem;
+    
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mobile-nav li a:hover, .mobile-nav li a:focus {
+	color: rgb(169, 225, 197);
+}
+
+.show-mobile-nav {
+	transform: scale(1);
+}
+
+.show-overlay {
+	height: 100vh;
+	width: 50%;
+	margin-left: 50%;
+	animation-duration: 1s;
+	animation-name: slidein;
+}
+
+.hide-overlay {
+	height: 100vh;
+	animation-duration: 1s;
+	animation-name: slideout;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 50%;
+		width: 100%;
+	}
+}
+@keyframes slideout {
+	from {
+		margin-left: 50%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 100%;
+		width: 100%;
+	}
+}
+
+.page-title {
+	text-align: center;
+	font-size: 3rem;
+	color: white;
+	padding-top: 35%;
+	text-shadow: 2px 2px 0px rgb(0, 0, 0), 3px 3px 0px rgba(255, 255, 255, 0.15);
+}
+
+.page-subtitle {
+	text-align: center;
+	font-size: 1.5rem;
+	color: white;
+	padding-top: 0.5rem;
+	padding-bottom: 10%;
+	text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgba(255, 255, 255, 0.15);
+}
+
+.container {
+	max-width: 991px;
+	margin: 0 auto;
+}
+
+/* footer */
+footer {
+	height: 5rem;
+	display: flex;
+	justify-content: space-around;
+	background-color: black;
+	color: white;
+}
+
+footer span {
+	padding: 2rem;
+}
+
+@media (min-width: 576px) {
+	.page-title {
+		font-size: 3.5rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.75rem;
+	}
+	.mobile-nav li a {
+		font-size: 1.7rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.page-title {
+		font-size: 4.5rem;
+	}
+
+	.page-subtitle {
+		font-size: 2rem;
+    }
+    .mobile-nav li a {
+		font-size: 3rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.page-title {
+		font-size: 5.5rem;
+		padding-top: 30%;
+	}
+
+	.page-subtitle {
+		font-size: 2.25rem;
+		padding-bottom: 10%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.page-title {
+		font-size: 7rem;
+	}
+
+	.page-subtitle {
+		font-size: 2.5rem;
+	}
+}
