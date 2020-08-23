@@ -11,7 +11,7 @@
 
 body {
 	margin: 0;
-	background-color: var(--main-bg-color);
+	background-color: black;
 	font-family: 'Dosis', sans-serif;
 }
 
@@ -27,6 +27,7 @@ header {
 
 main {
 	border: 5px solid white;
+	background-color: var(--main-bg-color);
 }
 
 main .container {
@@ -188,15 +189,18 @@ main .container {
 
 /* footer */
 footer {
+	font-size: 1rem;
 	height: 5rem;
+	margin: 1rem;
 	display: flex;
 	justify-content: space-around;
 	background-color: black;
 	color: white;
 }
 
+
 footer span {
-	padding: 2rem;
+	padding: 1rem;
 }
 
 @media (min-width: 576px) {
