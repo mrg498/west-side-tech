@@ -4,8 +4,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     hamburger_icon.addEventListener('click', function(){
         const overlay = document.querySelector('.overlay');
-        overlay.classList.toggle('show-overlay');
-        overlay.classList.toggle('hide-overlay');
+        if(overlay.classList.contains('show-overlay')){
+            overlay.classList.add('hide-overlay');
+            overlay.classList.remove('show-overlay');
+        }
+        else{
+            overlay.classList.add('show-overlay');
+            overlay.classList.remove('hide-overlay');
+        }
+        
         const mobile_nav = document.querySelector('.mobile-nav')
         mobile_nav.classList.toggle('show-mobile-nav');
         const bars = document.querySelector('.bars')
