@@ -1,0 +1,22 @@
+{
+  "name": "west-side-tech",
+  "version": "1.0.0",
+  "description": "website for tutoring on the westside",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrg498/west-side-tech.git"
+  },
+  "author": "miles grossenbacher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrg498/west-side-tech/issues"
+  },
+  "homepage": "https://github.com/mrg498/west-side-tech",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
