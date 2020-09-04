@@ -1,6 +1,7 @@
 :root {
 	--main-bg-color: rgb(211, 185, 82);
 	--secondary-bg-color: rgb(54, 103, 210);
+	--letter-spacing: 0.15rem;
 }
 
 * {
@@ -11,7 +12,7 @@
 
 body {
 	margin: 0;
-	background-color: var(--main-bg-color);
+	background-color: black;
 	font-family: 'Dosis', sans-serif;
 }
 
@@ -27,6 +28,7 @@ header {
 
 main {
 	border: 5px solid white;
+	background-color: var(--main-bg-color);
 }
 
 main .container {
@@ -104,20 +106,20 @@ main .container {
 	color: white;
 	padding: 0.5rem;
 	border-bottom: 3px solid rgb(140, 201, 171);
-    font-size: 1.3rem;
-    
+	font-size: 1.3rem;
 }
 
 .unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-.mobile-nav li a:hover, .mobile-nav li a:focus {
+.mobile-nav li a:hover,
+.mobile-nav li a:focus {
 	color: rgb(169, 225, 197);
 }
 
@@ -167,7 +169,7 @@ main .container {
 	font-size: 3rem;
 	color: white;
 	padding-top: 35%;
-	text-shadow: 2px 2px 0px rgb(0, 0, 0), 3px 3px 0px rgba(255, 255, 255, 0.15);
+	text-shadow: 2px 2px 5px var(--main-bg-color), 1px 1px 10px rgb(0, 0, 0);
 }
 
 .page-subtitle {
@@ -175,8 +177,10 @@ main .container {
 	font-size: 1.5rem;
 	color: white;
 	padding-top: 0.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	padding-bottom: 10%;
-	text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgba(255, 255, 255, 0.15);
+	text-shadow: 1px 1px 10px black, 2px 2px 0px rgba(0, 0, 0, 0.44);
 }
 
 .container {
@@ -184,9 +188,21 @@ main .container {
 	margin: 0 auto;
 }
 
+.section {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	border: 3px solid var(--secondary-bg-color);
+	border-radius: 8px;
+	-webkit-box-shadow: 1px 1px 13px 5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 13px 5px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 13px 5px rgba(0, 0, 0, 0.75);
+}
+
 /* footer */
 footer {
+	font-size: 1rem;
 	height: 5rem;
+	margin: 1rem;
 	display: flex;
 	justify-content: space-around;
 	background-color: black;
@@ -194,7 +210,7 @@ footer {
 }
 
 footer span {
-	padding: 2rem;
+	padding: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -217,8 +233,8 @@ footer span {
 
 	.page-subtitle {
 		font-size: 2rem;
-    }
-    .mobile-nav li a {
+	}
+	.mobile-nav li a {
 		font-size: 3rem;
 	}
 }
